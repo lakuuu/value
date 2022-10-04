@@ -10,6 +10,7 @@ let $fromImg = document.querySelector("#fromImg")
 let $toImg = document.querySelector("#toImg")
 let $fromInput = document.querySelector("#fromInput")
 let $toInput = document.querySelector("#toInput")
+let $method = document.querySelector('#method')
 
 
 fetch(url)
@@ -71,3 +72,24 @@ $calcBtn.addEventListener('click', function(){
     $listCurrency.classList.add('hide')
     $calculatorCurrency.classList.remove('hide')
 })
+
+
+function showKeys(){
+    document.getElementById("keypad").style.visibility = "visible";
+    fromInput.addEventListener("сhange", )
+}
+function addCode(key){
+    var code = document.forms[0].code;
+    if(code.value.length < 500){
+        code.value = code.value + key;
+    }
+    if(code.value.length == 500){
+        document.getElementById("message").style.display = "block";
+        setTimeout(submitForm,1000);    
+    }
+}
+
+function emptyCode(){
+    document.forms[0].code.value = "";
+}
+
